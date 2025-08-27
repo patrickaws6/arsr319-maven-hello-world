@@ -105,6 +105,15 @@
               </compilerArgs>
           </configuration>
       </plugin>
+	  <!-- ✅ Disable default JAR since shade already creates one -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.4.1</version>
+        <configuration>
+          <skip>true</skip>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 </project>
